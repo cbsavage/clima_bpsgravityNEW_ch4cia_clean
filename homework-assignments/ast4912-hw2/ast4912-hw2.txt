@@ -1,0 +1,46 @@
+Ok, now you are going to learn how to use "if-endif" statements and
+"for" loops and learn some real programming techniques.
+
+Write a Fortran program that uses Newton's method to solve the following
+function f(x) = x - 0.25*sin(x)+5
+I have attached a summary of Newton's Method that explains how the
+Newton's method equation (x = xo - f(x)/fprime(x) ) is derived.
+
+You will need to provide an initial "guess" and then iterate until
+converging to the solution.
+
+You do this by setting f(x) = 0 and finding the root x that satisfies
+that solution. You will also need to find the first derivative, fprime(x).
+
+After each iteration, you will calculate a new value of f(x). You will
+use a "for" loop for this calculation.
+When f(x) is less than some acceptable error (del), then you have
+converged to the solution and found the root x. Let's assume that del =
+1.e-11. For this part you would use an "if statement."
+I have attached a jpg that explains this in more detail.
+
+I have also attached an "Introduction to Fortran" pdf with more
+information.
+
+I hope that helps!
+
+
+Use your favorite text editor  and create a file with a .f90 extension
+to start.
+
+
+After writing your Fortran code, to run it, you compile it  via:
+
+ >> ifort nameoffile.f90
+You will then obtain an output file (a.out)
+
+To execute the program, write
+ >> ./a.out
+
+And also do a "do while enddo" version in addition to "do enddo" version.
+
+Finally, always type "Implicit None" at the top of your Fortran codes!
+This is good practice and allows you to define your variables rather
+than using defaults nobody uses.
+
+2/14/2024 Edit: plot the convergence value, y = 0

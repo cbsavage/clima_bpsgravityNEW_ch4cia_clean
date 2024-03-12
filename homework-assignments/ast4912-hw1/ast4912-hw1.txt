@@ -1,0 +1,29 @@
+As discussed in our meeting, here is the relevant paper for this first homework assignment( https://iopscience.iop.org/article/10.1088/0004-637X/765/2/131/pdf ). This was our 2013 habitable zone (HZ) paper and my first publication as a Ph.D. student.
+
+I have attached 4 files (from Figures 6 and 8, respectively, of our paper) describing the inner and outer edge boundaries of the habitable zone for stars with effective temperatures between 2,600 - 7,200 K.
+
+There are 3 main tasks here:
+
+1) Recreate both planetary albedo plots (with labels) from Figure 6
+
+2) Recreate both SEFF plots from Figure 6
+
+3) Also, recreate the habitable zone plot with labels, similar to Figure 8  (please do not worry about adding the green shaded color).
+For now just add the curves, do not worry about adding the planet points or legend.
+
+As mentioned, you can use either Python or MATLAB or equivalent.
+
+
+Use the "textread" function in MATLAB or "genfromtxt" in Python (numpy library) or "readcsv" (pandas library) to read in the data from the text files I gave you.
+Use the "help" and/or "doc" commands to figure out more details on what "textread" or other MATLAB functions do. You can google the equivalent Python commands.
+
+When you are done please send me both your code and plots.
+
+The planetary albedo is the fraction of incoming stellar energy that is reflected back out instead of being absorbed. Dark surfaces have a low albedo because they absorb a lot whereas light surfaces have a high albedo (reflecting a lot).
+
+In my codes, planetary albedo is calculated by dividing the upward stellar flux (FUPSOL) by the downward stellar flux (FDNSOL) at the top of the atmosphere.
+However, it is already pre-calculated for you in this file. The "ALBEDO" column in both text files is the planetary albedo.
+Then, FUPSOL - FDNSOL = FTSOL (which is the net or total solar flux).
+
+The effective stellar flux (SEFF) is defined as the ratio of the outgoing flux by the incoming stellar flux (= FTIR/FTSOL).  If you divide your FTIR values by their FTSOL values, you should get SEFF.
+In my papers, I usually write "FTIR" =  "FIR" and "FTSOL" = "FS" for short. 

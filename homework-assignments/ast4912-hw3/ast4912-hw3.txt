@@ -1,0 +1,9 @@
+HW #3
+For this assignment, you will read the data from your Newton's Method program and "write" it to a data file. The "write" command should be used inside the loop so that it prints every value of "x" into a file.
+The syntax for an unformatted "write" (we will do formatted writes later) is like this:
+      WRITE(80,*)
+
+The first entry is the filename. The "80" here means it will write to a fort.80 file. However, you can use any number. The second entry gives instructions for how the output should be formatted. In this case, the "*" means to use no format for the output. See what happens when you use something like the following inside your loop (assuming "i" is the counter):
+
+WRITE(80,*)i, x
+This should give you the value of "x" for each value of "i" and write both sets of data in columns in fort.80.

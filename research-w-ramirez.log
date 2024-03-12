@@ -1,0 +1,73 @@
+*****IN: Fri Nov 10 15:01:15 EST 2023
+
+/apps/python/python-3.8.0-gcc-9.1.0/bin/python
+
+from makefile
+
+# old compile command
+#FC = /opt/intel/fce/9.0/bin/ifort
+# new compile command
+# FC =/usr/local/intel-2013.3/bin/ifort
+FC = /home/lancercncs1/intel/oneapi/compiler/2021.2.0/linux/bin/intel64/ifort
+
+
+11/29/2023:
+mixing ratios
+simulating modern earth
+
+
+
+12/6/2023:
+
+Modern Earth Run:
+initial input_clima.dat settings:0
+	initial steps: 1000
+	G: change from Mars to Earth
+	RAD: mars to earth
+	PO: 5.e-5
+	PGO: 3
+	IO3, IUP: 0
+	TGO: 206
+	TSTRAT = 167.
+	ICONSERV: 1
+	SRFALB: 0.216
+
+cal-earth: initial methane was 1.000E-60
+- files in stokes dirs stayed but in my Ubuntu it didn't??
+- run in stokes for now
+- waiting for dir to download full
+- realized that file and directory cannot have same name even with different capitalization???
+- 
+-- after thing runs, copy temp-out into temp-in in IO/
+
+clima_allout is an output file
+
+clima_last shows temp & vertical profile (plotting stuff)
+plot pressure on y-axis
+
+might have to delete & re-upload the zip file :(
+(had to do that 12/15/2023)
+
+
+12/13/2023:
+
+- NO MODEL DEVELOPMENT ONLY IN RESEARCH PROPOSAL
+- BETTER PROPOSALS HAVE OBSERVATIONAL AND THEORETICAL ASPECTS
+
+
+1/31/2024:
+
+- more co2 near surface
+- pco2: 5.1875e-4
+- 29 g/mol
+- co2: 44 g/mol
+- '~' at end of name of file says its older version
+- when change driver file, do 'make clean'
+inner edge @ 200 K
+
+2/14/2024:
+- clima_last.tab is best for plotting data
+
+
+
+
