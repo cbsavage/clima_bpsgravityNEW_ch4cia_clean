@@ -5,28 +5,25 @@ Implicit None
 real :: pCO2, Seff, FTIR, FTSOL, ALBEDO
 integer, parameter :: rows = 24 !, lines
 ! integer, parameter :: lines = 21
-integer :: i,j, inner1, inner2
+integer :: i, j, inner1, inner2
 dimension:: pCO2(rows), Seff(rows), FTIR(rows), FTSOL(rows), ALBEDO(rows)
-! character( len=100 ) ::
 
-! rows = 24
-! lines = 21
 
-inner1 = 10
-! inner1 = 3
-open( unit= inner1, file='outer_edge_Fig6.322.txt' )
-inner2 = 20
-! inner2 = 4
-open( unit= inner2, file='outer_edge_Fig6_crap_copy.322.txt' )
+! inner1 = 10?
+inner1 = 3
+open( unit=inner1, file='outer_edge_Fig6.322.txt' )
+! inner2 = 20
+inner2 = 4
+open( unit=inner2, file='outer_edge_Fig6.322copynew.txt' )
 
-  read( inner1, * ) ! skips one line
-  write( inner2, 10 ) !40
+  read( inner1, * )
+  write( inner2, 40 ) !40, 10
 
   do i = 1, rows
       ! do j = 1, lines
-      read( inner1, * )pCO2(i), Seff(i), FTIR(i), FTSOL(i), ALBEDO(i)
-      write( inner2, 20 )pCO2(i), Seff(i), FTIR(i), FTSOL(i), ALBEDO(i)
-      ! enddo !50
+      read( inner1, * ) pCO2(i), Seff(i), FTIR(i), FTSOL(i), ALBEDO(i)
+      write( inner2, 50 ) pCO2(i), Seff(i), FTIR(i), FTSOL(i), ALBEDO(i)
+      ! enddo !50, 20
   enddo
 
 10  format( '#pCO2(bar)   Seff        FTIR            FTSOL        ALBEDO' )

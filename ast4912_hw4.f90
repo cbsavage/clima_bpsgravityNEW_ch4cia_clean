@@ -60,29 +60,29 @@ PROGRAM HW6_EXAMPLE
     REAL :: pCO2, Seff, ALBEDO, FTSOL, FTIR
     INTEGER, PARAMETER :: rows = 24
     INTEGER :: i, j, inner1, inner2
-    ! DIMENSION :: pCO2(rows), Seff(rows), ALBEDO(rows), FTSOL(rows), FTIR(rows)
+    DIMENSION :: pCO2(rows), Seff(rows), ALBEDO(rows), FTSOL(rows), FTIR(rows)
     CHARACTER(LEN=100) :: line
 
     inner1 = 3
-    open( unit=inner1, file='outer_edge_Fig6.322.txt' )
+    OPEN(unit= inner1, file = 'outer_edge_Fig6.322.txt')
     inner2 = 4
-    open( unit=inner2, file='outer_edge_Fig6.322copy.txt' )
+    OPEN(unit= inner2, file = 'outer_edge_Fig6.322clone.txt')
 
-    read( inner1, * ) ! skips one line
+    READ(inner1,*) ! skips one line
 
-    write( inner2, 40 )
+    WRITE(inner2,40)
 
-    do i=1, rows
-        read( inner1, * ) line
-        if ( line(1:1) == '#' ) then
-            write( inner2, '(A)' ) trim(line)
-        else
-            read( line, * ) pCO2(i), Seff(i), ALBEDO(i), FTSOL(i), FTIR(i)
-            write( inner2, 50 ) pCO2(i), Seff(i), ALBEDO(i), FTSOL(i), FTIR(i)
-        endif
-    enddo
+    DO i = 1, rows
+        READ(inner1,*) line
+        IF (line(1:1) == '#') THEN
+            WRITE(inner2, '(A)') TRIM(line)
+        ELSE
+            READ(line,*) pCO2(i), Seff(i), ALBEDO(i), FTSOL(i), FTIR(i)
+            WRITE(inner2,50) pCO2(i), Seff(i), ALBEDO(i), FTSOL(i), FTIR(i)
+        END IF
+    ENDDO
 
-    40  FORMAT( 'pCO2(bar)   Seff        FTIR            FTSOL        ALBEDO' )
-    50  FORMAT( F6.1, 4X, F7.5, 4X, E12.5, 4X, E12.5, 4X, F7.5 )
+    40  FORMAT('pCO2(bar)   Seff        FTIR            FTSOL        ALBEDO')
+    50  FORMAT(F6.1, 4X, F7.5, 4X, E12.5, 4X, E12.5, 4X, F7.5)
 
 END PROGRAM HW6_EXAMPLE

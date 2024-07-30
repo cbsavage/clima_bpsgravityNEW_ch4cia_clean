@@ -1,0 +1,9 @@
+HW4
+
+Now you will learn more about reading and writing more complex files.
+
+I have attached a Fortran program (HW4_example.f90) that reads in your "inneredge_Fig8.txt" file from HW1. Try executing the program yourself! It will produce an exactly cloned version of the original file.
+
+Review the code and understand how it was able to reproduce the original file (e.g. declarations, loops, and format statements). If you do not understand something, look it up in the Fortran tutorial (or other Fortran sources).
+
+Once comfortable, read in the big outer edge file you had gotten back in HW1 (outer_edge_Fig6.322) and write a code that exactly reproduces it. Use loops to access each subsequent section of the text file.
